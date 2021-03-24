@@ -1,0 +1,249 @@
+.thumb {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .example__link:hover,
+  .example__link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    outline: none;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  
+    transform: translateY(101%);
+  
+    width: 100%;
+    height: 100%;
+    background-color: $background-thumb;
+  
+    transition: transform 250ms $bazier;
+  }
+  
+  
+  .example__link:hover .overlay,
+  .example__link:focus .overlay {
+    transform: translateY(0);
+  }
+  
+  .overlay__text {
+    margin: 0;
+    padding: 63px 24px;
+  
+    color: $background-main;
+    font-size: 18px;
+    line-height: 1.56;
+  
+  }
+    
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background-modal;
+    z-index: 100;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $background-main;
+    max-width: 528px;
+    width: 100%;
+    /* min-height: 581px; */
+    padding: 40px;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  
+  .close-button {
+    position: absolute;
+    display: flex;
+    top: 8px;
+    right: 8px;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    background-color: $background-main;
+  }
+  
+  /* modal - FORM */
+  
+  .modal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .form__text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.172;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  
+  .form__item:not(last-of-type) {
+    margin-bottom: 10px;
+  }
+  
+  .form label {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.172;
+    letter-spacing: 0.01em;
+    color: $greytext;
+    margin-bottom: 4px;
+  }
+  
+  .form input {
+    width: 100%;
+    height: 40px;
+    padding: 11px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+  
+  .form-input__wraper {
+    position: relative;
+    display: block;
+  }
+  
+  .form-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    
+  }
+  
+  .form__item input:focus {
+    outline: none;
+    border-color: $focus;
+  }
+  
+  .form-input__wraper:focus .form-icon,
+  .form-input__wraper:hover .form-icon {
+    color: $focus;
+    fill: $focus;
+    transition: fill 250ms $bazier
+  }
+  
+  .textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    resize: none;
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+  
+  .textarea:focus {
+    outline: none;
+    border-color: $focus;
+  }
+  
+  /* checkbox */
+  
+  .checkbox {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .checkbox__label {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .checkbox__input {
+    
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  .checkbox__icon {
+    position: absolute;
+    transition: opacity 250ms $bazier
+  
+  }
+  
+  .check {
+    opacity: 0;
+  }
+  
+  .checkbox__input:checked ~ .check {
+    opacity: 1;
+  }
+  
+  .checkbox__input:checked ~ .uncheck {
+    opacity: 0;
+  }
+  
+  .checkbox__text {
+    font-size: 14px;
+    line-height: 1.1714;
+    letter-spacing: 0.03em;
+    color: $greytext;
+  }
+  
+  .checkbox__link {
+    text-decoration: underline;
+    color: $focus;
+  }
+  
+  .checkbox__icon {
+    position: absolute;
+    left: -20px;
+    top: 1px;
+  }
+  
+  /* button__submit */
+  
+  
+  .submit {
+    margin-top: 20px;
+    background-color: #2196F3;
+    border-radius: 4px;
+    border: none;
+    color: $herotext;
+    padding: 10px 55px;
+  }
+  
+  .submit:hover,
+  .submit:focus {
+    background-color: #188CE8;
+  }
+  
+  .close-button:focus .close-button__icon,
+  .close-button:hover .close-button__icon {
+    fill: $focus;
+    transition: fill 250ms $bazier;
+  }

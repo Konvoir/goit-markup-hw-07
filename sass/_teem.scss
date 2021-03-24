@@ -1,0 +1,101 @@
+.teem {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: $background-second;
+  }
+
+  .teem-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .teem_title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.172;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .team-card {
+    padding: 30px 32px;
+    background-color: $background-main;
+    border-radius: 0px 0px 4px 4px;
+  }
+  
+  .team-card__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.172;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .team-card__text {
+    color: $greytext;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.172;
+    text-align: center;
+  }
+  
+  .teem-item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 2px 1px rgba(0, 0, 0, 0.22);
+    border-radius: 0px 0px 4px 4px;
+  }
+  
+  .teem-item img {
+    display: block;
+  }
+  
+  .teem-item:hover,
+  .teem-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    outline: none;
+    transition: color 250ms $bazier, background-color 250ms $bazier;
+  }
+  
+  .teamate-networks {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    color: $greytext;
+    }
+  
+  
+  .teamate-network-item:not(:last-of-type) {
+    margin-right: 10px;
+  }
+  
+  .teamate-network-link {
+    display: inline-flex;
+    color: $greytext-second;
+    object-fit: contain;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .teamate-network-item {
+    align-items: baseline;
+   }
+  
+  .teamate-network-link:hover,
+  .teamate-network-link:focus {
+    color: $background-main;
+    background-color: $focus;
+    position: centre;
+    transition: color 250ms $bazier, background-color 250ms $bazier;
+  }
+  
+  .network-icon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }

@@ -1,0 +1,101 @@
+.header {
+    position: sticky;
+    top: 0;
+    min-height: 80px;
+    padding: 24 215px;
+    border-bottom: 1px solid #ececec;
+    background-color: $background-main;
+    z-index: 1;
+  }
+
+  .nav {
+    font-weight: 500;
+    align-items: center;
+    line-height: 1.172;
+    color: $maintext;
+    vertical-align: middle;
+    justify-content: space-between;
+  }
+
+  .nav__list {
+    margin-left: 93px;
+  }
+
+  .nav__item:not(:first-child) {
+    margin-left: 50px;
+  }
+
+  .logo {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1738;
+    color: $focus;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  .logoS {
+    color: $maintext;
+  }
+
+  .link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.172;
+    color: inherit;
+  }
+  
+  .link.active::after {
+    position: absolute;
+    bottom: -31px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-top: 28px;
+    background-color: $focus;
+    border-radius: 2px;
+  }
+
+  .contact {
+    margin-left: auto;
+  }
+  
+  .contact a {
+    color: $greytext;
+  }
+  
+  .contact li:last-child {
+    margin-left: 30px;
+  }
+  
+  .contact-icon {
+    margin-right: 10px;
+    text-align: center;
+    fill: currentColor;
+  }
+  
+  a.link:focus,
+  a.link:hover {
+    color: $focus;
+    transition: color 250ms $bazier, background-color 250ms $bazier;
+  }
+
+  a.link:focus::before,
+a.link:hover::before {
+  color: $focus;
+}
+
+.header,
+.nav,
+.nav__list,
+.box,
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }

@@ -1,0 +1,102 @@
+.portf {
+  padding: 94px 0;
+}
+  
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+  
+.button--menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.625;
+  background-color: none;
+  color: $maintext;
+  margin-bottom: 50px;
+}
+  
+.button--menu li:not(last-of-type) {
+  margin-right: 8px;
+}
+
+.button {
+  background-color: $background-second;
+  color: $maintext;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  border-radius: 4px;
+  transition: color 250ms $bazier, background-color 250ms $bazier, box-shadow 250ms $bazier;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  color: $background-main;
+  background-color: $focus;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  outline: none;
+  transition: color 250ms $bazier, background-color 250ms $bazier;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+  
+  /* margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap)); */
+}
+
+.exampl__el {
+  max-width: 370px;
+  flex-basis: calc(100% / 3 - $card-set-gap);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.example__link {
+  display: block;
+  transition: box-shadow 250ms $bazier;
+}
+
+.product {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.product h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $maintext;
+}
+
+.product p {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1, 85;
+  color: $greytext;
+  letter-spacing: 0.06em;
+}
