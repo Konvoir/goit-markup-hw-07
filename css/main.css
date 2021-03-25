@@ -998,8 +998,8 @@ a.adress {
 
 .exampl__el {
   max-width: 370px;
-  -ms-flex-preferred-size: calc(100% / 3 - $card-set-gap);
-      flex-basis: calc(100% / 3 - $card-set-gap);
+  -ms-flex-preferred-size: calc(100% / 3 - 30px);
+      flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 }
