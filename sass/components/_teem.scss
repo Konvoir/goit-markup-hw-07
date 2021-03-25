@@ -44,18 +44,19 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.12),
       0px 2px 1px rgba(0, 0, 0, 0.22);
     border-radius: 0px 0px 4px 4px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+      outline: none;
+      transition: color 250ms $bazier, background-color 250ms $bazier;
+    }
+
   }
   
   .teem-item img {
     display: block;
-  }
-  
-  .teem-item:hover,
-  .teem-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-    outline: none;
-    transition: color 250ms $bazier, background-color 250ms $bazier;
   }
   
   .teamate-networks {
@@ -79,19 +80,19 @@
     height: 44px;
     align-items: center;
     justify-content: center;
+
+    &:focus,
+    &:hover {
+      color: $background-main;
+      background-color: $focus;
+      position: centre;
+      transition: color 250ms $bazier, background-color 250ms $bazier;
+    }
   }
   
   .teamate-network-item {
     align-items: baseline;
    }
-  
-  .teamate-network-link:hover,
-  .teamate-network-link:focus {
-    color: $background-main;
-    background-color: $focus;
-    position: centre;
-    transition: color 250ms $bazier, background-color 250ms $bazier;
-  }
   
   .network-icon {
     fill: currentColor;

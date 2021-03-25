@@ -47,6 +47,16 @@
     font-size: 14px;
     line-height: 1.172;
     color: inherit;
+
+    &:focus,
+    &:hover {
+      color: $focus;
+      transition: color 250ms $bazier, background-color 250ms $bazier;
+
+      &::before {
+        color: $focus;
+      }
+    }
   }
   
   .link.active::after {
@@ -79,16 +89,10 @@
     fill: currentColor;
   }
   
-  a.link:focus,
-  a.link:hover {
-    color: $focus;
-    transition: color 250ms $bazier, background-color 250ms $bazier;
-  }
-
-  a.link:focus::before,
-a.link:hover::before {
-  color: $focus;
-}
+//   a.link:focus::before,
+//   a.link:hover::before {
+//   color: $focus;
+// }
 
 .header,
 .nav,

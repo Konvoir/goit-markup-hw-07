@@ -37,6 +37,14 @@
     background: rgba(255, 255, 255, 0.1);
     color: $background-main;
     fill: $herotext;
+
+    &:hover,
+    &:focus {
+      color: $background-main;
+      background-color: $focus;
+      transition: color 250ms $bazier, background-color 250ms $bazier;
+    }
+
   }
   
   .social-links-text {
@@ -50,12 +58,12 @@
     margin-bottom: 20px;
   }
   
-  .foot .teamate-network-link:hover,
-  .foot .teamate-network-link:focus {
-    color: $background-main;
-    background-color: $focus;
-    transition: color 250ms $bazier, background-color 250ms $bazier;
-  }
+  // .foot .teamate-network-link:hover,
+  // .foot .teamate-network-link:focus {
+  //   color: $background-main;
+  //   background-color: $focus;
+  //   transition: color 250ms $bazier, background-color 250ms $bazier;
+  // }
   
   .nav-list::after {
     content: '';

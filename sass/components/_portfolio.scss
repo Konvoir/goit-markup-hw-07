@@ -43,18 +43,19 @@
   border-radius: 4px;
   transition: color 250ms $bazier, background-color 250ms $bazier, box-shadow 250ms $bazier;
   cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $background-main;
+    background-color: $focus;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    outline: none;
+    transition: color 250ms $bazier, background-color 250ms $bazier;
+  }
 }
 
-.button:hover,
-.button:focus,
-.button:active {
-  color: $background-main;
-  background-color: $focus;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  outline: none;
-  transition: color 250ms $bazier, background-color 250ms $bazier;
-}
 
 .examples {
   display: flex;

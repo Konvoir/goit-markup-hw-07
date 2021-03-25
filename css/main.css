@@ -105,6 +105,16 @@ ul {
   color: inherit;
 }
 
+.link:focus, .link:hover {
+  color: #2196f3;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:focus::before, .link:hover::before {
+  color: #2196f3;
+}
+
 .link.active::after {
   position: absolute;
   bottom: -31px;
@@ -133,18 +143,6 @@ ul {
   margin-right: 10px;
   text-align: center;
   fill: currentColor;
-}
-
-a.link:focus,
-a.link:hover {
-  color: #2196f3;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-a.link:focus::before,
-a.link:hover::before {
-  color: #2196f3;
 }
 
 .header,
@@ -197,7 +195,7 @@ a.link:hover::before {
   letter-spacing: 0.06em;
   border: 1px solid transparent;
   background-color: #2196f3;
-  color: #AFB1B8;
+  color: #ffffff;
   width: 200px;
   height: 50px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -368,17 +366,16 @@ a.link:hover::before {
   border-radius: 0px 0px 4px 4px;
 }
 
-.teem-item img {
-  display: block;
-}
-
-.teem-item:hover,
-.teem-item:focus {
+.teem-item:hover, .teem-item:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   outline: none;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.teem-item img {
+  display: block;
 }
 
 .teamate-networks {
@@ -414,19 +411,18 @@ a.link:hover::before {
           justify-content: center;
 }
 
-.teamate-network-item {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.teamate-network-link:hover,
-.teamate-network-link:focus {
+.teamate-network-link:focus, .teamate-network-link:hover {
   color: #ffffff;
   background-color: #2196f3;
   position: centre;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.teamate-network-item {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .network-icon {
@@ -457,13 +453,13 @@ a.link:hover::before {
           justify-content: space-between;
 }
 
-.client li {
+.client-item {
   width: 170px;
   height: 90px;
 }
 
-.client-item:hover .client-icon,
-.client-item:focus .client-icon {
+.client-item:focus .client-icon,
+.client-item:hover .client-icon {
   color: #2196f3;
   fill: #2196f3;
   /* background-color: $focus; */
@@ -489,8 +485,7 @@ a.link:hover::before {
   border-radius: 4px;
 }
 
-.client-item a:hover,
-.client-item a:focus {
+.client-item a:hover, .client-item a:focus {
   border-color: #2196f3;
   outline: none;
   fill: #2196f3;
@@ -551,6 +546,13 @@ a.adress {
   fill: #ffffff;
 }
 
+.social-links .teamate-network-link:hover, .social-links .teamate-network-link:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .social-links-text {
   font-family: Roboto, sans-serif;
   font-weight: 700;
@@ -560,14 +562,6 @@ a.adress {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
-}
-
-.foot .teamate-network-link:hover,
-.foot .teamate-network-link:focus {
-  color: #ffffff;
-  background-color: #2196f3;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list::after {
@@ -972,9 +966,7 @@ a.adress {
   cursor: pointer;
 }
 
-.button:hover,
-.button:focus,
-.button:active {
+.button:hover, .button:focus, .button:active {
   color: #ffffff;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
